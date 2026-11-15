@@ -1,0 +1,35 @@
+[project]
+name = "romanian-extractive-qa"
+version = "0.1.0"
+description = "Romanian extractive question answering using BERT"
+authors = [
+    {name = "Florin Barbu",email = "bflorin429@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "torch",
+    "transformers",
+    "datasets",
+    "evaluate",
+    "accelerate",
+    "numpy",
+    "pandas",
+    "scikit-learn"
+]
+
+
+[dependency-groups]
+dev = [
+    "jupyter",
+    "ipykernel",
+    "matplotlib"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+packages = [{ include = "src" }]
